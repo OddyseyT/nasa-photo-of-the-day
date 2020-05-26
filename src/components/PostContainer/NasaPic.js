@@ -7,7 +7,7 @@ const NasaPic = props => {
     console.log(props)
 
     return (
-        <div className="List">
+        <div className="posts-container-wrapper">
       <h2>{props.title}</h2>
       <img
           alt="post thumbnail"

@@ -8,9 +8,9 @@ function App() {
   return (
     <div className="App">
       <SearchBar />
-      <p>
+      <h1>
         NASA Photo of the Day! <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      </h1>
       <Post />
     </div>
     
