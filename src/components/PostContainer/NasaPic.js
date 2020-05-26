@@ -1,29 +1,27 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
+//import LikeSection from "./LikeSection";
 
-const NasaPic = () => {
+import "./Post.css";
 
-const [pic, setPIc] = useState([]);
-useEffect(() => {
+const NasaPic = props => {
+    console.log(props)
 
-    axios
-    .get("https://api.nasa.gov/planetary/apod ")
-    .then(response => {
-      console.log(response);
-    }
+    return (
+        <div className="List">
+      <h2>{props.title}</h2>
+      <img
+          alt="post thumbnail"
+          className="post-image"
+          src={props.Picture}
+        />
+      <div className="bottom">
+        <p>{props.Explanation}</p>
+        <p>{`Copyright: ${props.Copyright}`}</p>
+        <p>{`Date: ${props.Date}`}</p>
+      </div>
+    </div>
 
     )
-    .catch(err => {console.log("something went wrong")})
+    }
 
-.then(() => {console.log("success")})
-
-}, []);
-
-return (
-    <div className="nasaPic">
-
-    </div>
-)
-};
-
-export default NasaPic
+    export default NasaPic;

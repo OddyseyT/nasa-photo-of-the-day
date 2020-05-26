@@ -1,15 +1,37 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import NasaPic from "./NasaPic"
-import LikeSection from "./LikeSection";
 
-import "./Post.css";
+export default function Post() {
+const [pic, setPic] = useState([]);
 
-const Post = props => {
-    console.log(props)
+useEffect(() => {
 
-    return (
-        <NasaPic />
-    )
+    axios.get("https://api.nasa.gov/planetary/apod?api_key=09piu2lof5APQG2myoBoySfjhatAnf6GegcPPRuX")
+    .then(response => {
+      console.log(response.data);
+      setPic(response.data);
     }
 
-    export default Post;
+    )
+    .catch(err => {console.log("something went wrong")})
+
+.then(() => {console.log("success")})
+
+}, []);
+
+ return (
+
+<div className="entry">
+
+    
+      <NasaPic title={pic.title}
+      Picture={pic.hdurl} 
+      Explanation={pic.explanation}
+      Copyright={pic.copyright}
+      Date={pic.date}
+     />
+  </div>
+ )
+ }
+
