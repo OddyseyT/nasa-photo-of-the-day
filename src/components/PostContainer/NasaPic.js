@@ -1,5 +1,5 @@
 import React from "react";
-//import LikeSection from "./LikeSection";
+
 
 import "./Post.css";
 
