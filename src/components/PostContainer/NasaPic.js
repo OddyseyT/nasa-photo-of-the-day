@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Card, CardHeader, CardFooter, CardBody,
+import { Container, Col, Row,Card, CardHeader, CardFooter, CardBody,
  CardText } from 'reactstrap';
 
 import "./Post.css";
@@ -21,7 +21,8 @@ const NasaPic = props => {
     //     <p>{`Date: ${props.Date}`}</p>
     //   </div>
     // </div>
-
+<Container>
+<Col>
 <Card>
       <CardHeader>{props.title}</CardHeader>
       <CardBody>
@@ -39,7 +40,8 @@ const NasaPic = props => {
      <p>{`Date: ${props.Date}`}</p>
       </CardFooter>
     </Card>
-
+</Col>
+</Container>
     )
     }
 
