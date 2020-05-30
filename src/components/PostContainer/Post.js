@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import NasaPic from "./NasaPic"
-import { Container, Row } from "reactstrap";
+
 
 export default function Post() {
 const [pic, setPic] = useState([]);

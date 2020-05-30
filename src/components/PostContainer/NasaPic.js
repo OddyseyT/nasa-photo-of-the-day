@@ -23,7 +23,7 @@ const NasaPic = props => {
     // </div>
 <Container>
 <Col>
-<Card>
+<Card body inverse style={{ backgroundColor: 'tan', borderColor: '#333' }}>
       <CardHeader>{props.title}</CardHeader>
       <CardBody>
       <img
