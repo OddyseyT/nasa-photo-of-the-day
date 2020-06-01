@@ -1,14 +1,19 @@
 import React from "react";
+import SearchBar from "./components/SearchBar/SearchBarContainer";
+import Post from "./components/PostContainer/Post"
+
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <SearchBar />
+      <h1>
+        NASA Photo of the Day! <span role="img" aria-label='go!'>🚀</span>!
+      </h1>
+      <Post />
     </div>
+    
   );
 }
 
